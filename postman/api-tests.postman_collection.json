@@ -1,1 +1,64 @@
-
+{
+	"info": {
+		"_postman_id": "83a558af-c240-4f25-a243-5af048c5d60c",
+		"name": "API Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39519587"
+	},
+	"item": [
+		{
+			"name": "Get Posts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Проверка, что статус код равен 201 (для POST-запроса)",
+							"pm.test(\"Статус код равен 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"    });",
+							"",
+							"    // Проверка, что ответ содержит объект с полем title",
+							"    pm.test(\"Ответ содержит объект с полем title\", function () {",
+							"        var responseJson = pm.response.json();",
+							"            pm.expect(responseJson).to.have.property('title');",
+							"            });",
+							"            "
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"title\": \"Новый пост\",\n        \"body\": \"Содержимое нового поста\",\n          \"userId\": 1\n          }\n          \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
