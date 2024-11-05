@@ -26,6 +26,6 @@ npm install -g newman
 ## Содержание
 - [Тест-кейсы для API](api-test-cases.md)
 - [Баг-репорты для API](api-bug-reports.md)
-- [Postman коллекция](api-tests.postman_collection.json)
+- [Postman коллекция](postman/api-tests.postman_collection.json)
 
 
