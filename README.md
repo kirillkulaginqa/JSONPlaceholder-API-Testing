@@ -1,5 +1,18 @@
 # JSONPlaceholder-API-Testing
 
+Этот проект предназначен для автоматизации тестирования API с использованием Postman и Newman.
+
+## Как запустить тесты
+
+Чтобы запустить тесты, используйте следующую команду:
+
+```bash
+newman run postman/api-tests.postman_collection.json
+
+Предварительно необходимо установить Node.js и Newman:
+ ```bash
+npm install -g newman
+
 ## Описание
 Проект для тестирования REST API JSONPlaceholder. Проект включает тест-кейсы, баг-репорты, а также автоматизированные тесты, написанные в Postman и запускаемые через Newman.
 
@@ -15,14 +28,3 @@
 - [Postman коллекция](postman-collection.json)
 
 
-Этот проект предназначен для автоматизации тестирования API с использованием Postman и Newman.
-
-## Как запустить тесты
-
-1. Установите Node.js.
-2. Установите Newman:
-   ```bash
-   npm install -g newman
-   
-3. Запустите тесты:
-   ```bash newman run postman/api-tests.postman_collection.json
