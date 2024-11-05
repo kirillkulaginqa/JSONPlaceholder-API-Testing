@@ -8,11 +8,12 @@
 
 ```bash
 newman run postman/api-tests.postman_collection.json
+```
 
 Предварительно необходимо установить Node.js и Newman:
  ```bash
 npm install -g newman
-
+```
 ## Описание
 Проект для тестирования REST API JSONPlaceholder. Проект включает тест-кейсы, баг-репорты, а также автоматизированные тесты, написанные в Postman и запускаемые через Newman.
 
