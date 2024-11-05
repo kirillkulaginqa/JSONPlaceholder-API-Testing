@@ -23,6 +23,6 @@
 2. Установите Newman:
    ```bash
    npm install -g newman
-3. Запустите тесты
+3. Запустите тесты:
    ```bash
 newman run postman/api-tests.postman_collection.json
